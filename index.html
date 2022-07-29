@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Music Player</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .top {
+            text-align: center;
+            overflow: hidden;
+            width: 100%;
+            height: 50px;
+            background-color: greenyellow;
+
+        }
+
+        .top h1 {
+            color: crimson;
+
+
+        }
+
+        .main {
+            margin-top: 20px;
+            height: 85vh;
+            cursor: pointer;
+            /*background-color: greenyellow;*/
+        }
+
+        .main h2 {
+            padding-top: 5px;
+            text-align: center;
+            color: yellow;
+        }
+
+        .first {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+
+        }
+
+        .cards button {
+            margin: 2px;
+            border-radius: 2px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            /*color:white;*/
+            width: 75px;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+
+        .cards button:hover {
+            transform: scale(0.98);
+
+        }
+
+        .main h3 {
+            padding-top: 5px;
+            text-align: center;
+            color: yellow;
+        }
+
+        .second {
+            margin: 5px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .third
+        {
+            margin: 5px;
+            
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;  
+        }
+        @media (max-width:435px)
+        {
+            .cards{
+                display: block;
+                margin:0 auto;
+            }
+        }
+    </style>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div class="top">
+        <h1><span style="color:black">&#119136;&#119136;&#119136;</span>Music Player App<span
+                style="color:black">&#119136;&#119136;&#119136;</span></h1>
+    </div>
+    <section>
+        <div class="main" id="main">
+            <h2>Nepali songs</h2>
+            <div class="first">
+                <div class="cards">
+                    <img src="jerry.jpg" width="200px" height="185px">
+                    <div class="firstbutton">
+                        <button onclick="jerry()">PLAY</button>
+                        <button onclick="jerry1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="mayahaina.jpg" width="200px" height="185px">
+                    <div class="secondbutton">
+                        <button onclick="asu()">PLAY</button>
+                        <button onclick="asu1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="pg.jpg" width="200px" height="185px">
+                    <div class="thirdbutton">
+                        <button onclick="pg0()">PLAY</button>
+                        <button onclick="pg1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="eutamanxe.jpg" width="200px" height="185px">
+                    <div class="fourthbutton">
+                        <button onclick="euta0()">PLAY</button>
+                        <button onclick="euta1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="jadai.jpg" width="200px" height="185px">
+                    <div class="fifthbutton">
+                        <button onclick="jadai0()">PLAY</button>
+                        <button onclick="jadai1()">STOP</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>Hindi Songs</h2>
+            <div class="second">
+                <div class="cards">
+                    <img src="kesariya.jpg" width="200px" height="185px">
+                    <div class="sixthbutton">
+                        <button onclick="kesu0()">PLAY</button>
+                        <button onclick="kesu1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="roy.jpg" width="200px" height="185px">
+                    <div class="sixthbutton">
+                        <button onclick="roy0()">PLAY</button>
+                        <button onclick="roy1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="newyork.jpg" width="200px" height="185px">
+                    <div class="sixthbutton">
+                        <button onclick="new0()">PLAY</button>
+                        <button onclick="new1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="bekhayli.webp" width="200px" height="185px">
+                    <div class="sixthbutton">
+                        <button onclick="bekha0()">PLAY</button>
+                        <button onclick="bekha1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="loveis.jpg" width="200px" height="185px">
+                    <div class="sixthbutton">
+                    <button onclick="love0()" >PLAY</button> 
+                    <button onclick="love1()" >STOP</button> 
+                    </div> 
+                    </div>
+
+            </div>
+
+
+
+            <h2>Miscellanous Songs</h2>
+            <div class="third">
+                <div class="cards">
+                    <img src="come on.jpg" width="200px" height="185px">
+                    <div class="sixthbutton">
+                        <button onclick="comeon0()">PLAY</button>
+                        <button onclick="comeon1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="perfect two.jpg" width="200px" height="185px">
+                    <div class="sixthbutton">
+                        <button onclick="perfect0()">PLAY</button>
+                        <button onclick="perfect1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="titanic.jpg" width="200px" height="185px">
+                    <div class="sixthbutton">
+                        <button onclick="everynight0()">PLAY</button>
+                        <button onclick="everynight1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="butter.png" width="200px" height="185px">
+                    <div class="sixthbutton">
+                        <button onclick="butter0()">PLAY</button>
+                        <button onclick="butter1()">STOP</button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="gagnam.jpg" width="200px" height="185px">
+                    <div class="sixthbutton">
+                    <button onclick="gagnam0()" >PLAY</button> 
+                    <button onclick="gagnam1()" >STOP</button> 
+                    </div> 
+                    </div>
+
+            </div>    
+        </div>
+
+    </section>
+
+
+
+
+</body>
+<script>
+    function jerry() {
+        audio = new Audio('jerry.mp3');
+        audio.play();
+    }
+    function jerry1() {
+        audio.pause();
+    }
+
+
+    function asu() {
+        a = new Audio('asu.mp3');
+        a.play();
+
+    }
+    function asu1() {
+        a.pause();
+
+    }
+    function pg0() {
+        a = new Audio('pk.mp3');
+        a.play();
+
+    }
+    function pg1() {
+        a.pause();
+
+    }
+    function euta0() {
+        a = new Audio('euta.mp3');
+        a.play();
+
+    }
+    function euta1() {
+        a.pause();
+
+    }
+    function jadai0() {
+        a = new Audio('1mb.mp3');
+        a.play();
+
+    }
+    function jadai1() {
+        a.pause();
+
+    }
+
+    function kesu0() {
+        audio = new Audio('bram.mp3');
+        audio.play();
+    }
+    function kesu1() {
+        audio.pause();
+    }
+
+
+    function roy0() {
+        a = new Audio('matlabi.mp3');
+        a.play();
+
+    }
+    function roy1() {
+        a.pause();
+
+    }
+    function new0() {
+        a = new Audio('tjna.mp3');
+        a.play();
+
+    }
+    function new1() {
+        a.pause();
+
+    }
+    function bekha0() {
+        a = new Audio('ks.mp3');
+        a.play();
+
+    }
+    function bekha1() {
+        a.pause();
+
+    }
+    function love0() {
+        a = new Audio('love is the');
+        a.play();
+
+    }
+    function love1() {
+        a.pause();
+
+    }
+
+    function comeon0() {
+        audio = new Audio('come ons.mp3');
+        audio.play();
+    }
+    function comeon1() {
+        audio.pause();
+    }
+
+
+    function perfect0() {
+        a = new Audio('perfect.mp3');
+        a.play();
+
+    }
+    function perfect1() {
+        a.pause();
+
+    }
+    function everynight0() {
+        a = new Audio('myheart.mp3');
+        a.play();
+
+    }
+    function everynight1() {
+        a.pause();
+
+    }
+    function butter0() {
+        a = new Audio('bts.mp3');
+        a.play();
+
+    }
+    function butter1() {
+        a.pause();
+
+    }
+    function gagnam0() {
+        a = new Audio('psy.mp3');
+        a.play();
+
+    }
+    function gagnam1() {
+        a.pause();
+
+    }
+
+</script>
+
+</html>
